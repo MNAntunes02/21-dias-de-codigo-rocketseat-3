@@ -1,0 +1,19 @@
+
+<div class="w-full flex justify-center items-center pb-12 flex-col">
+    <input class="text-4xl w-32 h-32 px-10 rounded-full" type="text" name="" id="">
+    <p class="text-white text-xl pt-2">Teste aqui!</p>
+</div>
+
+<section class="grid lg:grid-cols-12 grid-cols-6 text-white gap-5 text-4xl">
+
+    <div *ngFor="let emoji of arr ; index as i">
+        <div class="cursor-pointer hover:scale-125 duration-300" #emojis (click)="copyEmojia(i)">{{emoji}}</div>
+    </div>
+
+<div class="cursor-pointer hover:scale-125 duration-300" (click)="copyEmoji($event)"><div>😁</div></div> 
+
+   
+
+
+</section>
+
