@@ -1,0 +1,2 @@
+"https://api.themoviedb.org/3/list/1?api_key=d8ab8eb9d8f6c6034c0d9006765d3dd2&language=pt-BR"
+"https://image.tmdb.org/t/p/w500/"
