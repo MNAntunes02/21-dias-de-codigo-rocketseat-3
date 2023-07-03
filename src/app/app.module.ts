@@ -21,6 +21,7 @@ import { UnsplashApiComponent } from './pages/unsplash-api/unsplash-api.componen
 import { EmojiComponent } from './pages/emoji/emoji.component';
 import { LoadingComponent } from './pages/loading/loading.component';
 import { InstagramComponent } from './instagram/instagram.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InstagramComponent } from './instagram/instagram.component';
     UnsplashApiComponent,
     EmojiComponent,
     LoadingComponent,
-    InstagramComponent
+    InstagramComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

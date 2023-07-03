@@ -7,10 +7,12 @@ import { IndexComponent } from './pages/index/index.component';
 import { PageApiComponent } from './pages/page-api/page-api.component';
 import { TeclasComponent } from './pages/teclas/teclas.component';
 import { UnsplashApiComponent } from './pages/unsplash-api/unsplash-api.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 const routes: Routes = [
   {path: "", component: IndexComponent},
   {path: "ecommerce", component: EcommerceComponent},
+  {path: "portfolio", component: PortfolioComponent},
   {path: "page-api", component: PageApiComponent},
   {path: "teclas", component: TeclasComponent},
   {path: "gerador-senha", component: GeradorSenhaComponent},
