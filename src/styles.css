@@ -3,10 +3,45 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: Hacked;
+    src: url(./assets/fonts/HACKED.ttf);
+}
+
+.text-Hacked{
+    font-family: Hacked;
+}
+
 body{
     background-image: url(./assets/images/pexels-anunturi-gratuite-14676.jpg);
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    
+    background-repeat: repeat;
 }
+
+.neon-animated{
+    animation: neon 3s linear infinite;
+}
+
+@keyframes neon {
+    0%{
+        filter: drop-shadow(0 0 1rem black);
+    }
+    80%{
+        filter: drop-shadow(0 0 1rem black);
+    }
+    85%{
+        filter: drop-shadow(0 0 1rem #FF5A28);
+    }
+    90%{
+        filter: drop-shadow(0 0 1rem black);
+    }
+    95%{
+        filter: drop-shadow(0 0 1rem #FF5A28);
+    }
+    100%{
+        filter: drop-shadow(0 0 1rem black);
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

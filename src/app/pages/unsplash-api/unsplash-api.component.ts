@@ -14,7 +14,7 @@ export class UnsplashApiComponent implements OnInit {
   teste: any;
   arrPhotos: IPhoto[] = [];
 
-  constructor(private unsplashApi: UnsplashApiService) { }
+  constructor(public unsplashApi: UnsplashApiService) { }
 
   ngOnInit(): void {
 

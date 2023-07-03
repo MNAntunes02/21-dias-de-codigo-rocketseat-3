@@ -9,9 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit , AfterViewInit {
 
   faBars = faBars;
-
-  @ViewChild('menucheck') menucheck!: ElementRef<HTMLInputElement>;
-  @ViewChild('menu') menu!: ElementRef<HTMLDivElement>;
+  menuSelect = false;
 
   constructor() { }
 
@@ -26,10 +24,15 @@ export class HeaderComponent implements OnInit , AfterViewInit {
     // : this.menu.nativeElement.setAttribute("class","grid grid-cols-1 absolute -right-52 bg-gray-100 gap-4 p-6 pt-0 rounded-lg top-0 duration-500")
   }
 
+  // openMenu(){
+  //   this.menucheck.nativeElement.checked ? 
+  //   this.menu.nativeElement.setAttribute("class","grid grid-cols-1 absolute -right-52 bg-black gap-6 p-6 pt-0 rounded-lg top-4 duration-500")
+  //   : this.menu.nativeElement.setAttribute("class","grid grid-cols-1 absolute right-0 bg-black gap-6 p-6 pt-0 rounded-lg top-4 duration-500")
+  // }
+
   openMenu(){
-    this.menucheck.nativeElement.checked ? 
-    this.menu.nativeElement.setAttribute("class","grid grid-cols-1 absolute -right-52 bg-black gap-6 p-6 pt-0 rounded-lg top-4 duration-500")
-    : this.menu.nativeElement.setAttribute("class","grid grid-cols-1 absolute right-0 bg-black gap-6 p-6 pt-0 rounded-lg top-4 duration-500")
+    this.menuSelect = !this.menuSelect;
+    console.log(this.menuSelect)
   }
 
 }

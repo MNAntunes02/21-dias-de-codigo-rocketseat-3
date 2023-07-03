@@ -1,5 +1,11 @@
-<app-header></app-header>
-<main class="container mx-auto min-h-[84%] py-5 flex justify-center items-center">
-    <router-outlet></router-outlet>
-</main>
-<app-footer></app-footer>
+<section class="w-screen min-h-screen h-auto relative">
+    <app-header class="z-50"></app-header>
+    <main class="container mx-auto flex justify-center min-h-screen h-auto items-center py-32">
+        <router-outlet></router-outlet>
+        <!-- <app-loading></app-loading> -->
+    </main>
+    <button (click)="openDialog()" class="fixed lg:bottom-16 lg:left-16 bottom-4 left-4 w-16 h-16 rounded-full bg-gradient-to-br from-main via-second to-main text-white z-10">
+        <fa-icon [icon]="faFileLine"></fa-icon>
+    </button>
+    <app-footer class="absolute bottom-0"></app-footer>
+</section>

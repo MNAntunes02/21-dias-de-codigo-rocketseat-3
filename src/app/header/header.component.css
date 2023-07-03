@@ -1,0 +1,3 @@
+.active{
+    @apply text-[#FF5A28] font-semibold;
+}

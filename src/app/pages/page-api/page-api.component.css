@@ -1,3 +1,23 @@
 .post-path{
-    @apply lg:w-[250px] lg:h-[370px] my-auto bg-slate-700 snap-center shadow-xl shadow-black rounded-lg overflow-hidden h-[259px] w-[175px];
+    @apply lg:w-[250px] lg:h-[370px] h-[259px] w-[175px] my-auto bg-zinc-800 snap-center shadow-xl shadow-black rounded-lg overflow-hidden hover:w-[259px] lg:hover:w-[370px] hover:rotate-90 duration-700;
+}
+
+.path-to-back{
+    @apply lg:w-[250px] lg:h-[370px] h-[259px] w-[175px] relative duration-500 rounded-lg;
+}
+
+.roll-movies{
+    @apply grid grid-flow-col overflow-x-scroll lg:overflow-hidden overflow-y-hidden gap-5 snap-x px-24 duration-700 scroll-smooth pr-72;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb{
+    @apply bg-[#FF5A28] rounded-lg bg-opacity-60;
+}
+
+.scrollbar-hidden::-webkit-scrollbar{
+    width: 5px;
+}
+
+.z-frente{
+    z-index: 5000;
 }

@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: "gerador-senha", component: GeradorSenhaComponent},
   {path: "unsplash-api", component: UnsplashApiComponent},
   {path: "emoji", component: EmojiComponent},
+  {path: "**" , redirectTo: ""}
 ];
 
 @NgModule({

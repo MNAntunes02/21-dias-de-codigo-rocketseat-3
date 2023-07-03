@@ -1,37 +1,24 @@
-<!-- <section class="grid grid-cols-2 lg:grid-cols-6 gap-4 p-2 overflow-auto" #section1> -->
 <section class="container" #section1>
-
-    <!-- <div class="w-screen lg:p-7 lg:px-0 p-5 px-0 shadow-inner shadow-black rounded-xl snap-proximity"> 
-        <p class="lg:pb-7 pb-5 pl-5 text-white font-medium">Mais populares</p>
-        <div class="grid grid-flow-col overflow-x-scroll lg:overflow-hidden overflow-y-hidden gap-5 snap-x scrollbar-hidden px-24">
-            <div *ngFor="let item of arrItems" id="bg1" class="lg:w-[250px] lg:h-[370px] my-auto bg-slate-700 snap-center shadow-xl shadow-black rounded-lg overflow-hidden h-[259px] w-[175px]">
-                <img class="w-auto h-auto" src="https://image.tmdb.org/t/p/w500{{ item.poster_path }}" alt="">
+    <app-loading *ngIf="this.pageApiService.loading" class="absolute w-screen h-screen top-0 left-0 z-frente"></app-loading>
+    <div *ngFor="let list of arrList; index as j" class="w-[120%] p-7 px-0 shadow-inner shadow-black rounded-xl snap-proximity"> 
+        <p class="lg:pb-7 pb-5 pl-5 text-white font-medium">{{ arrList[j].name }}</p>
+        <button class="absolute right-0 text-white text-3xl z-50 h-96 w-20 bg-gradient-to-r to-black from-transparent hidden lg:block" (click)="rollMoviesNext(j)"><fa-icon [icon]="faArrow"></fa-icon></button>
+        <button class="absolute text-white text-3xl z-50 h-96 w-20 bg-gradient-to-r to-black from-transparent rotate-180 hidden lg:block" (click)="rollMoviesBack(j)"><fa-icon [icon]="faArrow"></fa-icon></button>
+        <div class="roll-movies" #roll>
+            <div *ngFor="let item of arrList[j].items; index as i" class="post-path" (mouseenter)="hiddenImg(i,j)" (mouseleave)="showImg(i,j)" #paths>
+                <img class="path-to-back opacity-100 z-10" src="https://image.tmdb.org/t/p/w500{{ item.poster_path }}" alt="">
+                <div class="-rotate-90 relative lg:bottom-[361px] bottom-[305px] lg:right-[10px] right-[-30px] w-full">
+                    <div class="h-24 w-full bg-blue-700">
+                        <img class="w-full h-full overflow-hidden object-cover object-top" src="https://image.tmdb.org/t/p/w500{{ item.backdrop_path }}">
+                    </div>
+                    <div class="h-64 w-full p-3 overflow-y-auto scrollbar-hidden" >
+                        <span class="text-white font-bold text-lg">{{ item.title }}</span>
+                        <p class="text-white pt-2 h-full">{{ item.overview }}</p>   
+                    </div>
+                </div>
             </div>
-        </div>
-    </div> -->
-    
-    <div class="w-screen lg:p-7 lg:px-0 p-5 px-0 shadow-inner shadow-black rounded-xl snap-proximity"> 
-        <p class="lg:pb-7 pb-5 pl-5 text-white font-medium">Mais populares</p>
-        <div class="grid grid-flow-col overflow-x-scroll lg:overflow-hidden overflow-y-hidden gap-5 snap-x scrollbar-hidden px-24">
-            <div id="bg1" class="post-path hover:rotate-90 hover:scale-x-150 duration-500">
-                <div *ng></div>
-            </div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-            <div id="bg1" class="post-path hover:rotate-90"></div>
-        </div>
+        </div >
     </div>
-
-
 </section>
 
 
